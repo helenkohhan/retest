@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>도서정보 수정 페이지</title>
+
+</head>
+
+
+<body>
+	<h2>도서정보 수정 페이지</h2>
+  	<form action="/book/update" method="get">
+    <input type="text" name="isbn" readonly th:value="${dto.isbn}">
+    <input type="text" name="btitle" placeholder="부자의 생각, 가난한 생각" th:value="${dto.btitle}">
+    <input type="text" name="bwriter" placeholder="김승호" th:value="${dto.bwriter}">
+    <input type="text" name="bpublisher" placeholder="해냄" th:value="${dto.bpublisher}">
+    <input type="text" name="bmoney" placeholder="12000" th:value="${dto.bmoney}">
+    <button>도서정보 수정</button>
+  </form>
+</body>
+</html>
